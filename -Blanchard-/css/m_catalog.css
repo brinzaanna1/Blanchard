@@ -1,0 +1,135 @@
+.catalog {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.catalog__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__paintor-info-wrap {
+  width: calc(755 / 1600 * 100%);
+}
+
+.catalog__column-left {
+  display: none;
+}
+
+.catalog__column-left.tab-active {
+  display: block;
+  animation-name: fade-in;
+  animation-duration: var(--medium);
+}
+
+.catalog__column-right {
+  width: calc(800 / 1600 * 100%);
+}
+
+.catalog__title-descr.text {
+  margin-bottom: 37px;
+}
+
+.catalog__paintor-img {
+  display: block;
+  margin-bottom: 32px;
+}
+
+.catalog__paintor-name {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.catalog__paintor-data {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--gray);
+}
+
+.catalog__paintor-descr {
+  margin: 0;
+}
+
+.catalog__paintor-empty {
+  margin-bottom: 10px;
+  font-size: 23px;
+  line-height: 32px;
+}
+
+.catalog__paintor-descr-empty {
+  margin-bottom: 10px;
+}
+
+.catalog__empty-link {
+  font-size: 16px;
+}
+
+@media (max-width: 1280px) {
+  .catalog__column-right {
+    padding-left: 25px;
+  }
+
+  .catalog__paintor-descr-empty {
+    width: 95%;
+  }
+}
+
+@media (max-width: 970px) {
+  .catalog__content {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .catalog__column-right {
+    width: 100%;
+    margin-bottom: 50px;
+    padding-left: 0;
+  }
+
+  .catalog__paintor-info-wrap {
+    width: 100%;
+  }
+
+  .catalog__title-descr.text {
+    margin-bottom: 20px;
+  }
+
+  .catalog__paintor-descr {
+    width: 100%;
+  }
+
+  .catalog__paintor-img {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 610px) {
+  .catalog {
+    padding-top: 51px;
+    padding-bottom: 30px;
+  }
+
+  .catalog__title-descr {
+    display: none;
+  }
+
+  .catalog__paintor-img {
+    margin-bottom: 24px;
+  }
+
+  .catalog__paintor-name {
+    font-size: 24px;
+  }
+
+  .catalog__paintor-descr {
+    width: 99%;
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .catalog__paintor-descr-empty {
+    width: 70%;
+  }
+}

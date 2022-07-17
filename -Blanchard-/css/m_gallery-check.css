@@ -1,0 +1,75 @@
+.check__fieldset {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+}
+
+.check__label {
+  font-size: 16px;
+  line-height: 31px;
+  cursor: pointer;
+}
+
+.check__visible {
+  position: relative;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  border: 1px solid var(--white);
+  vertical-align: middle;
+  transition: border-color var(--short);
+}
+
+.check__visible::before {
+  content: "";
+  position: absolute;
+  top: calc(50%);
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  opacity: 0;
+  background-color: var(--violet-light);
+  transition: opacity var(--short);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.check__text {
+  vertical-align: middle;
+  transition: color var(--short);
+}
+
+.check__input:checked ~ .check__visible {
+  border-color: var(--violet-light);
+}
+
+.check__input:checked ~ .check__visible::before {
+  opacity: 1;
+}
+
+.check__input:checked ~ .check__text {
+  color: var(--violet-light);
+}
+
+.check__label:hover .check__visible {
+  border-color: var(--violet-light);
+}
+
+.check__label:hover .check__text {
+  color: var(--violet-light);
+}
+
+.check__input:focus ~ .check__visible {
+  border-color: var(--violet-light);
+}
+
+.check__input:focus ~ .check__visible::before {
+  background-color: var(--violet-light);
+}
+
+.check__input:focus ~ .check__text {
+  color: var(--violet-light);
+}

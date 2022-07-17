@@ -1,0 +1,71 @@
+.tooltips {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--violet);
+  border-radius: 50%;
+  vertical-align: middle;
+  outline: none;
+  transition: background-color var(--short), border-color var(--short);
+}
+
+.tooltips::before {
+  content: "i";
+  position: absolute;
+  top: 0;
+  left: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--black);
+  transition: color var(--short);
+}
+
+.tooltips:hover,
+.tooltips:focus {
+  background-color: var(--violet-light);
+}
+
+.tooltips:active {
+  background-color: var(--violet);
+}
+
+.tooltips:active:before {
+  color: var(--white);
+}
+
+/* Tippy */
+
+.tippy-box[data-theme~="proects-tooltips"] {
+  padding: 8px 3px;
+  border-radius: 0;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 16px;
+  color: var(--white);
+  text-align: center;
+  background-color: var(--violet);
+}
+
+.tippy-box[data-theme~="proects-tooltips"][data-placement^="top"]
+  > .tippy-arrow::before {
+  border-top-color: var(--violet);
+}
+
+.tippy-box[data-theme~="proects-tooltips"][data-placement^="bottom"]
+  > .tippy-arrow::before {
+  border-bottom-color: var(--violet);
+}
+
+.tippy-box[data-theme~="proects-tooltips"][data-placement^="left"]
+  > .tippy-arrow::before {
+  border-left-color: var(--violet);
+}
+
+.tippy-box[data-theme~="proects-tooltips"][data-placement^="right"]
+  > .tippy-arrow::before {
+  border-right-color: var(--violet);
+}
