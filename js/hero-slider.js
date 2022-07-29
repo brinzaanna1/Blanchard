@@ -1,5 +1,5 @@
 (() => {
-  const swiper = new Swiper('.js-bg-slider', {
+  const partnersSlider = new Swiper('.js-bg-slider', {
     allowTouchMove: false,
     loop: true,
     effect: 'fade',
